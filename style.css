@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family:'Antonio', sans-serif;
+}
+
+h1{
+  font-size: 50px;
+}
+
+:root {
+  --bg-color: #32292F;
+  --second-bg-color: #000000;
+  --text-color: #ffffff;
+  --main-color: #4bd7c7;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left:0;
+  width:100%;
+  padding: 2rem 9%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 2.5rem;
+  color:var(--main-color);
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 3.5rem;
+}
+
+.navbar a:hover,
+.navbar a.active
+{
+  color: var(--main-color);
+}
+
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+}
+
+.home-content{
+  max-width: 60rem;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content .text-animate{
+  position:relative;
+  width: 32.8rem;
+}
+
+.home-content .text-animate h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: .7px var(--main-color);
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  margin:2rem 0 4rem;
+}
+
+.btn-box {
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+.btn-box .btn:hover {
+  color: var(--text-color);
+}
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover {
+  color: var(--text-color);
+}
+.btn-box .btn:nth-child(2)::before{
+  background: var(--main-color);
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 4rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 1;
+
+}
+
+#linkedin-icon{
+  font-size: 3rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+
+.skills-category {
+  margin-bottom: 4rem;
+  padding: 0 9%;
+}
+
+.skills-category h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  color: var(--main-color);
+  text-align: left;
+}
+
+.skill-container {
+  margin-bottom: 2rem;
+}
+
+.skill-container p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.skill-bar {
+  background-color: #00000052;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 30px;
+  width: 100%;
+}
+
+.skill-bar .skill-level {
+  height: 100%;
+  background-color: var(--main-color);
+  width: 0; /* Initial Breite, die durch Animation erhöht wird */
+  border-radius: 10px;
+  transition: width 2s ease; /* Animation */
+}
+
+/* Verschiedene Skills, je nach Prozentwert */
+.java-bar .skill-level {
+  width: 70%;
+}
+.csharp-bar .skill-level {
+  width: 70%;
+}
+.python-bar .skill-level {
+  width: 50%;
+}
+.kotlin-bar .skill-level {
+  width: 50%;
+}
+.html-bar .skill-level {
+  width: 50%;
+}
+.css-bar .skill-level {
+  width: 50%;
+}
+.js-bar .skill-level {
+  width: 70%;
+}
+.sql-bar .skill-level {
+  width: 40%;
+}
+.german-bar .skill-level {
+  width: 100%;
+}
+.english-bar .skill-level {
+  width: 80%;
+}
+.russian-bar .skill-level {
+  width: 60%;
+}
+.blender-bar .skill-level {
+  width: 80%;
+}
+.sp-bar .skill-level {
+  width: 1%;
+}
+.ps-bar .skill-level {
+  width: 60%;
+}
+.illustrator-bar .skill-level {
+  width: 60%;
+}
+.ae-bar .skill-level {
+  width: 70%;
+}
+
+.projects{
+  text-align: center;
+  padding: 20px;
+}
+
+.projects h3{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);/* 2 Spalten */
+  gap: 20px; /* Abstand zwischen den Grid-Elementen */
+}
+
+.projects-item{
+  background-color:#00000052;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.projects-item:hover{
+  transform: scale(1.05);
+}
+
+.projects-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: var(--main-color); /* Hintergrundfarbe für Button */
+  color:var(--text-color);
+  text-decoration: none; /* Unterstreichung entfernen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  transition: background-color 0.3s;
+}
+
+.view-details:hover {
+  background-color: var(--second-bg-color); /* Dunklere Farbe bei Hover */
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: 1fr; /* Bei kleinen Bildschirmen nur eine Spalte */
+  }
+}
+
+input {
+  width: 400px;
+  position:relative;
+  overflow: hidden;
+  height: 40px;
+  padding: 10px; /* Optional für mehr Innenabstand */
+  font-size: 16px; /* Textgröße anpassen */
+  border-radius: 10px;
+  background: #00000052;
+}
